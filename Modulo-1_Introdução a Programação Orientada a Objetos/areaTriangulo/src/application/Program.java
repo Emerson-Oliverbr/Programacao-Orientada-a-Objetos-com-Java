@@ -1,0 +1,48 @@
+package application;
+
+import entities.Triangulo;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Triangulo trianguloX = new Triangulo();	
+		Triangulo trianguloY = new Triangulo();	
+		
+		System.out.println("Entre com as medidas do triangulo X: ");
+		trianguloX.a = sc.nextDouble();
+		trianguloX.b = sc.nextDouble();
+		trianguloX.c = sc.nextDouble();
+		System.out.println("Entre com as medidas do triangulo Y: ");
+		trianguloY.a = sc.nextDouble();
+		trianguloY.b = sc.nextDouble();
+		trianguloY.c = sc.nextDouble();
+		
+		double p = (trianguloX.a + trianguloX.b + trianguloX.c) / 2.0;
+		
+		double areaTrianguloX = Math.sqrt(p * (p - trianguloX.a) * (p - trianguloX.b) * (p - trianguloX.c));
+		
+		p = (trianguloY.a + trianguloY.b + trianguloY.c) / 2.0;
+		double areaTrianguloY = Math.sqrt(p * (p - trianguloY.a) * (p - trianguloY.b) * (p - trianguloY.c));
+		
+		System.out.printf("Area do Triangulo X: %.4f%n ", areaTrianguloX);
+		System.out.printf("Area do Triangulo Y: %.4f%n ", areaTrianguloY);
+		
+		if(areaTrianguloX > areaTrianguloY) {
+			System.out.println("Maior area: X");
+		}
+		else {
+			System.out.println("Maior area: Y");
+		}
+		
+		sc.close();
+		
+
+	}
+
+}
