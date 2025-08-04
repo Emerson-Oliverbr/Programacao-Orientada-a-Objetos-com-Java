@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/emerson/Java COMPLETO-Poo/Modulo-1_Introdução a Programação Orientada a Objetos/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+2486721404.index
+1671038741.index
