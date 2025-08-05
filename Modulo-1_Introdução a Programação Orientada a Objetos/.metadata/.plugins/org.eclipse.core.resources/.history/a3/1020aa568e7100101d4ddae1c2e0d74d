@@ -21,10 +21,14 @@ public class Program {
 		System.out.println("Entre com as medidas do triangulo Y: ");
 		trianguloY.a = sc.nextDouble();
 		trianguloY.b = sc.nextDouble();
-		trianguloY.c = sc.nextDouble();		
+		trianguloY.c = sc.nextDouble();
 		
-		double areaTrianguloX = trianguloX.area();
-		double areaTrianguloY = trianguloY.area();		
+		double p = (trianguloX.a + trianguloX.b + trianguloX.c) / 2.0;
+		
+		double areaTrianguloX = Math.sqrt(p * (p - trianguloX.a) * (p - trianguloX.b) * (p - trianguloX.c));
+		
+		p = (trianguloY.a + trianguloY.b + trianguloY.c) / 2.0;
+		double areaTrianguloY = Math.sqrt(p * (p - trianguloY.a) * (p - trianguloY.b) * (p - trianguloY.c));
 		
 		System.out.printf("Area do Triangulo X: %.4f%n ", areaTrianguloX);
 		System.out.printf("Area do Triangulo Y: %.4f%n ", areaTrianguloY);
@@ -36,7 +40,9 @@ public class Program {
 			System.out.println("Maior area: Y");
 		}
 		
-		sc.close();		
+		sc.close();
+		
+
 	}
 
 }
